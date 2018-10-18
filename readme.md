@@ -39,7 +39,7 @@ import $ from 'pumpkin.js'
 # ✏️ Example️
 
 ```js
-import $ from './pumpkin.js'
+import $ from 'pumpkin.js'
 
 $.ready(() => {
   const $header = $.qs('header')

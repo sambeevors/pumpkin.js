@@ -31,3 +31,6 @@ node_modules/
 
 # Output folder
 dist/
+
+# OS Files
+.DS_Store

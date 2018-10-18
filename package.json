@@ -1,0 +1,31 @@
+{
+  "name": "pumpkin.js",
+  "version": "0.0.1",
+  "description": "A mini-library for helpful JS functions 🎃",
+  "author": "Sam Beevors",
+  "license": "ISC",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "dist/pumpkin.js",
+  "umd:main": "dist/pumpkin.umd.js",
+  "module": "dist/pumpkin.mjs",
+  "source": "src/pumpkin.js",
+  "devDependencies": {
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "microbundle": "^0.6.0"
+  }
+}

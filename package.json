@@ -23,6 +23,9 @@
   "umd:main": "dist/pumpkin.umd.js",
   "module": "dist/pumpkin.mjs",
   "source": "src/pumpkin.js",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",

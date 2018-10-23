@@ -14,7 +14,7 @@ Run callback function once DOM has fully loaded
 
 ```js
 $.ready(() => {
-  console.log('DOM is ready)
+  console.log('DOM is ready')
 })
 ```
 

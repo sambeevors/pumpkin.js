@@ -2,6 +2,8 @@
 
 A micro-library for writing vanilla javascript as efficiently as possible.
 
+[Official Documentation](https://sambeevors.github.io/pumpkin.js/)
+
 # ✨ Features
 
 - Super simple shorthand DOM selectors

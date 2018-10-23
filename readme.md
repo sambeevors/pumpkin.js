@@ -7,6 +7,8 @@ A micro-library for writing vanilla javascript as efficiently as possible.
 - Super simple shorthand DOM selectors
 - Multiple nodes returned as a REAL array
 - jQuery-like ready function (without the need for jQuery)
+- Under 1KB in size minified
+- Commonly written (and rewritten) helper functions
 
 # 🔧 Installation
 
@@ -19,27 +21,19 @@ $ npm i --save pumpkin.js
 You can import the package using ESM imports
 
 ```js
-import pumpkin from 'pumpkin.js'
+import * as $ from 'pumpkin.js'
 ```
 
 Or just good old CJS imports
 
 ```js
-const pumpkin = require('pumpkin.js')
-```
-
-> Pumpkin!? That's a terrible name!
-
-You're probably right, which is why pumpkin is returned as a default function, letting you import it as whatever you want
-
-```js
-import $ from 'pumpkin.js'
+const $ = require('pumpkin.js')
 ```
 
 # ✏️ Example️
 
 ```js
-import $ from 'pumpkin.js'
+import * as $ from 'pumpkin.js'
 
 $.ready(() => {
   const $header = $.qs('header')
@@ -47,8 +41,8 @@ $.ready(() => {
   const $lastCard = $.last($cards)
 
   $header.innerHTML = `
-        <h1>Hello World! 🎃</h1>
-    `
+    <h1>Hello World! 🎃</h1>
+  `
 
   // We can use forEach because $cards is actually an array
   $cards.forEach($card => {
@@ -58,3 +52,7 @@ $.ready(() => {
   $lastCard.classList.add('-last')
 })
 ```
+
+# 👫 Contributing
+
+Contributions are welcome, feel free to suggest improvements via GitHub issues, or open any pull requests you may have

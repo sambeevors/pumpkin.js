@@ -6,11 +6,17 @@ A micro-library for writing vanilla javascript as efficiently as possible.
 
 # ✨ Features
 
-- Super simple shorthand DOM selectors
-- Multiple nodes returned as a REAL array
-- jQuery-like ready function (without the need for jQuery)
-- Under 1KB in size minified
-- Commonly written (and rewritten) helper functions
+- ## 🤓 Super Simple
+
+  Import and start coding without relying on any other dependencies
+
+- ## 👣 Microscopic Footprint
+
+  Under 1KB in size, yet incredibly powerful and time-saving
+
+- ## 📈 Performant
+
+  Written with performance in mind, and making use of modern Javascript methods where avaliable
 
 # 🔧 Installation
 

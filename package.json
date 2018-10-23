@@ -13,8 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run docs:deploy"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

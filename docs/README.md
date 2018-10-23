@@ -4,7 +4,7 @@ actionText: Get Started →
 actionLink: /guide/
 features:
   - title: 🤓 Super Simple
-    details: Import and start coding without relying on any other dependancies
+    details: Import and start coding without relying on any other dependencies
   - title: 👣 Microscopic Footprint
     details: Under 1KB in size, yet incredibly powerful and time-saving
   - title: 📈 Performant

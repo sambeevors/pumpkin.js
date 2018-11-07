@@ -21,7 +21,7 @@ export const qsa = (selector, scope = document) => [
  * @param  {Array} array     The array to select from
  * @param  {Number} count    The number of items to retrieve (optional)
  * @param  {Boolean} reverse Whether to reverse the returned array (optional)
- * @return {Mixed}           Either first item or an array of first x items
+ * @return {Any}             Either first item or an array of first x items
  */
 export const first = (array, count, reverse) => {
   if (!count) return array[0]
@@ -36,7 +36,7 @@ export const first = (array, count, reverse) => {
  * @param  {Array} array     The array to select from
  * @param  {Number} count    The number of items to retrieve (optional)
  * @param  {Boolean} reverse Whether to reverse the returned array (optional)
- * @return {Mixed}           Either last item or an array of last x items
+ * @return {Any}             Either last item or an array of last x items
  */
 export const last = (array, count, reverse) => {
   if (!count) return array[array.length - 1]

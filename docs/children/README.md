@@ -1,6 +1,6 @@
 ---
 next: /siblings/
-prev: /last/
+prev: /strip/
 ---
 
 # children

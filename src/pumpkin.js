@@ -47,6 +47,19 @@ export const last = (array, count, reverse) => {
 }
 
 /**
+ * Remove value(s) from an array
+ * @param  {Array} array The array to select from
+ * @param  {Any} values  The values to remove
+ * @return {Array}       The new array
+ */
+export const strip = (array, ...values) => {
+  values.forEach(value => {
+    array = array.filter(item => item !== value)
+  })
+  return array
+}
+
+/**
  * Get the children of an element
  * @param  {Node} el The element to search
  * @return {Array}   The children of the passed element

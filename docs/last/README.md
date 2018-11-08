@@ -1,5 +1,5 @@
 ---
-next: /children/
+next: /strip/
 prev: /first/
 ---
 

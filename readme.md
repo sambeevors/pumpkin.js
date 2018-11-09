@@ -1,5 +1,7 @@
 # 🎃 pumpkin.js
 
+[![GitHub issues](https://img.shields.io/github/issues/sambeevors/pumpkin.js.svg)](https://github.com/sambeevors/pumpkin.js/issues) [![GitHub stars](https://img.shields.io/github/stars/sambeevors/pumpkin.js.svg)](https://github.com/sambeevors/pumpkin.js/stargazers) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://standardjs.com)
+
 A micro-library for writing vanilla javascript as efficiently as possible.
 
 [Official Documentation](https://sambeevors.github.io/pumpkin.js/)

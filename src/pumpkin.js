@@ -196,9 +196,9 @@ export const ready = cb => {
 
 /**
  * Slugify a string
- * @param {String} text The string to slugify
- * @param {String} text Custom word seperator [optional]
- * @return {String}     The 'slugified' string
+ * @param {String} text      The string to slugify
+ * @param {String} separator Custom word seperator [optional]
+ * @return {String}          The 'slugified' string
  */
 export const slugify = (text, separator) => {
   text = text

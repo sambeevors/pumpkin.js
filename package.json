@@ -5,11 +5,12 @@
   "author": "Sam Beevors",
   "license": "ISC",
   "scripts": {
-    "dev": "microbundle watch",
-    "build": "microbundle",
+    "dev": "microbundle watch --strict",
+    "build": "microbundle --strict",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "vuepress build docs && ./deploy.sh"
+    "docs:deploy": "vuepress build docs && ./deploy.sh",
+    "test": "jest --coverage"
   },
   "husky": {
     "hooks": {
@@ -18,6 +19,7 @@
   },
   "lint-staged": {
     "*.js": [
+      "npm test",
       "prettier --write src/pumpkin.js",
       "git add src/pumpkin.js"
     ]
@@ -30,9 +32,14 @@
     "dist/*"
   ],
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
     "husky": "^1.1.2",
+    "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "microbundle": "^0.6.0",
+    "regenerator-runtime": "^0.13.1",
     "vuepress": "^0.14.4"
   }
 }

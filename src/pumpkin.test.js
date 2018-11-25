@@ -1,5 +1,6 @@
 import * as $ from './pumpkin'
 
+let $container
 let $toDoList
 let $toDoListItems
 let $toDoListItem
@@ -7,7 +8,7 @@ let $hiddenElement
 
 const resetDom = () => {
   document.body.innerHTML = `
-    <div>
+    <div id="container">
       <h1>To Do</h1>
       <ul id="to-do-list">
         <li>Go shopping</li>
@@ -18,6 +19,7 @@ const resetDom = () => {
     </div>
   `
 
+  $container = $.qs('#container')
   $toDoList = $.qs('#to-do-list')
   $toDoListItems = $.qsa('li', $toDoList)
   $toDoListItem = $.qs('li', $toDoList)
@@ -31,7 +33,10 @@ test('Query Selector', () => {
 })
 
 test('Query Selector All', () => {
+  // Check length of array
   expect($toDoListItems).toHaveLength(3)
+  // Check first item is correct
+  expect($toDoListItems[0]).toEqual($toDoListItem)
 })
 
 test('First Item(s) In Array', () => {
@@ -41,6 +46,10 @@ test('First Item(s) In Array', () => {
   expect($.first([1, 2, 3, 4], 2)).toContain(1, 2)
   // Test with reverse parameter
   expect($.first([1, 2, 3, 4], 2, true)).toContain(2, 1)
+  // Test with DOM nodes
+  expect($.first($toDoListItems)).toEqual($toDoListItems[0])
+  // Test with invalid parameter
+  expect($.first([1, 2], 3, true)[0]).toBeUndefined()
 })
 
 test('Last Item(s) In Array', () => {
@@ -50,6 +59,12 @@ test('Last Item(s) In Array', () => {
   expect($.last([1, 2, 3, 4], 2)).toContain(3, 4)
   // Test with reverse parameter
   expect($.last([1, 2, 3, 4], 2, true)).toContain(4, 3)
+  // Test with DOM nodes
+  expect($.last($toDoListItems)).toEqual(
+    $toDoListItems[$toDoListItems.length - 1]
+  )
+  // Test with invalid parameter
+  expect($.last([1, 2], 3)[0]).toBeUndefined()
 })
 
 test('Strip Items(s) From Array', () => {
@@ -57,18 +72,35 @@ test('Strip Items(s) From Array', () => {
   expect($.strip([1, 2, 3, 4], 1)).toContain(2, 3, 4)
   // Test with extra parameters
   expect($.strip([1, 2, 3, 4], 1, 3)).toContain(2, 4)
+  // Test with non existant value
+  expect($.strip([1, 2, 3, 4], 5)).toContain(1, 2, 3, 4)
+  // Test with DOM nodes
+  expect($.strip($toDoListItems, $toDoListItem)).toHaveLength(2)
 })
 
 test('Element Children', () => {
+  // Basic test
   expect($.children($toDoList)).toHaveLength(3)
+  // Test children are correct and in order
+  expect($.children($toDoList)[0]).toEqual($toDoListItems[0])
+  // Test element with no children
+  expect($.children($hiddenElement)).toHaveLength(0)
 })
 
 test('Element Siblings', () => {
+  // Basic test
   expect($.siblings($toDoListItem)).toHaveLength(2)
+  // Test siblings are correct and in order
+  expect($.siblings($toDoListItem)[0]).toEqual($toDoListItems[1])
+  // Test element with no siblings
+  expect($.siblings($container)).toHaveLength(0)
 })
 
 test('Parent Contains Child', () => {
-  expect($.contains($toDoList, $toDoListItem))
+  // Check where true
+  expect($.contains($toDoList, $toDoListItem)).toBe(true)
+  // Check where false
+  expect($.contains($toDoList, $hiddenElement)).toBe(false)
 })
 
 test('Empty Element', () => {
@@ -119,6 +151,11 @@ test('Add CSS To Element', () => {
   })
   expect($toDoList.style.margin).toBe('20px auto')
 
+  $.css($toDoList, {
+    fakeProperty: 'foo'
+  })
+  expect($toDoList.style.fakeProperty).toBe('foo')
+
   resetDom()
 })
 
@@ -146,6 +183,15 @@ test('Propagating Event Listeners', () => {
   })
   $toDoListItem.dispatchEvent(clickEvent)
   expect(triggered).toBeTruthy()
+
+  triggered = false
+
+  // Test clicking wrong item
+  $.on('click', $container, 'h1', () => {
+    triggered = true
+  })
+  $hiddenElement.dispatchEvent(clickEvent)
+  expect(triggered).toBeFalsy()
 })
 
 test('DOM Ready', () => {

@@ -29,14 +29,11 @@ const resetDom = () => {
 resetDom()
 
 test('Query Selector', () => {
-  expect($toDoList).toEqual(document.querySelector('#to-do-list'))
+  expect($toDoList).toMatchSnapshot()
 })
 
 test('Query Selector All', () => {
-  // Check length of array
-  expect($toDoListItems).toHaveLength(3)
-  // Check first item is correct
-  expect($toDoListItems[0]).toEqual($toDoListItem)
+  expect($toDoListItems).toMatchSnapshot()
 })
 
 test('First Item(s) In Array', () => {
@@ -47,7 +44,7 @@ test('First Item(s) In Array', () => {
   // Test with reverse parameter
   expect($.first([1, 2, 3, 4], 2, true)).toContain(2, 1)
   // Test with DOM nodes
-  expect($.first($toDoListItems)).toEqual($toDoListItems[0])
+  expect($.first($toDoListItems)).toMatchSnapshot()
   // Test with invalid parameter
   expect($.first([1, 2], 3, true)[0]).toBeUndefined()
 })
@@ -60,9 +57,7 @@ test('Last Item(s) In Array', () => {
   // Test with reverse parameter
   expect($.last([1, 2, 3, 4], 2, true)).toContain(4, 3)
   // Test with DOM nodes
-  expect($.last($toDoListItems)).toEqual(
-    $toDoListItems[$toDoListItems.length - 1]
-  )
+  expect($.last($toDoListItems)).toMatchSnapshot()
   // Test with invalid parameter
   expect($.last([1, 2], 3)[0]).toBeUndefined()
 })
@@ -75,23 +70,19 @@ test('Strip Items(s) From Array', () => {
   // Test with non existant value
   expect($.strip([1, 2, 3, 4], 5)).toContain(1, 2, 3, 4)
   // Test with DOM nodes
-  expect($.strip($toDoListItems, $toDoListItem)).toHaveLength(2)
+  expect($.strip($toDoListItems, $toDoListItem)).toMatchSnapshot()
 })
 
 test('Element Children', () => {
   // Basic test
-  expect($.children($toDoList)).toHaveLength(3)
-  // Test children are correct and in order
-  expect($.children($toDoList)[0]).toEqual($toDoListItems[0])
+  expect($.children($toDoList)).toMatchSnapshot()
   // Test element with no children
   expect($.children($hiddenElement)).toHaveLength(0)
 })
 
 test('Element Siblings', () => {
   // Basic test
-  expect($.siblings($toDoListItem)).toHaveLength(2)
-  // Test siblings are correct and in order
-  expect($.siblings($toDoListItem)[0]).toEqual($toDoListItems[1])
+  expect($.siblings($toDoListItem)).toMatchSnapshot()
   // Test element with no siblings
   expect($.siblings($container)).toHaveLength(0)
 })
@@ -123,7 +114,7 @@ test('Distance From Top', () => {
 
 test('Show Element', () => {
   $.show($hiddenElement)
-  expect($hiddenElement.style.display).toBeFalsy()
+  expect($hiddenElement.style.display).toBe('')
 
   resetDom()
 })
@@ -137,7 +128,7 @@ test('Hide Element', () => {
 
 test('Toggle Element', () => {
   $.toggle($hiddenElement)
-  expect($hiddenElement.style.display).toBeFalsy()
+  expect($hiddenElement.style.display).toBe('')
 
   $.toggle($hiddenElement)
   expect($hiddenElement.style.display).toBe('none')
@@ -147,14 +138,10 @@ test('Toggle Element', () => {
 
 test('Add CSS To Element', () => {
   $.css($toDoList, {
-    margin: '20px auto'
-  })
-  expect($toDoList.style.margin).toBe('20px auto')
-
-  $.css($toDoList, {
+    margin: '20px auto',
     fakeProperty: 'foo'
   })
-  expect($toDoList.style.fakeProperty).toBe('foo')
+  expect($toDoList).toMatchSnapshot()
 
   resetDom()
 })

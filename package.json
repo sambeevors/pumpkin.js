@@ -37,7 +37,7 @@
     "babel-preset-env": "^1.7.0",
     "husky": "^1.1.2",
     "jest": "^23.6.0",
-    "lint-staged": "^7.3.0",
+    "lint-staged": "^8.1.0",
     "microbundle": "^0.6.0",
     "regenerator-runtime": "^0.13.1",
     "vuepress": "^0.14.4"

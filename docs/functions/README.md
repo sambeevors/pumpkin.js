@@ -25,3 +25,4 @@ The following is a list of all the functions avaliable within pumpkin.js
 - [css](/css/)
 - [on](/on/)
 - [ready](/ready/)
+- [slugify](/slugify/)

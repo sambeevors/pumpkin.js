@@ -1,5 +1,6 @@
 ---
 prev: /on/
+next: /slugify/
 ---
 
 # ready

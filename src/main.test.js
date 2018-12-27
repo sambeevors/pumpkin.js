@@ -188,3 +188,10 @@ test('DOM Ready', () => {
   })
   expect(ready).toBeTruthy()
 })
+
+test('Slugify String', () => {
+  expect($.slugify('This is a test')).toBe('this-is-a-test')
+  expect($.slugify('This is a test --- ')).toBe('this-is-a-test')
+  expect($.slugify('This -- is a ## test ---')).toBe('this-is-a-test')
+  expect($.slugify("C'est déjà l'été.")).toBe('cest-deja-lete')
+})

@@ -20,14 +20,14 @@
   "lint-staged": {
     "*.js": [
       "npm test",
-      "prettier --write src/pumpkin.js",
-      "git add src/pumpkin.js"
+      "prettier --write src/*.js",
+      "git add src/*.js"
     ]
   },
-  "main": "dist/pumpkin.js",
-  "umd:main": "dist/pumpkin.umd.js",
-  "module": "dist/pumpkin.mjs",
-  "source": "src/pumpkin.js",
+  "main": "dist/main.js",
+  "umd:main": "dist/main.umd.js",
+  "module": "dist/main.mjs",
+  "source": "src/main.js",
   "files": [
     "dist/*"
   ],

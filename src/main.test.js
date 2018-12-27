@@ -1,4 +1,4 @@
-import * as $ from './pumpkin'
+import * as $ from './main'
 
 let $container
 let $toDoList

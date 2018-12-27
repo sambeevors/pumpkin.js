@@ -3,5 +3,7 @@
     "titleBar.activeBackground": "#D9773F",
     "titleBar.inactiveBackground": "#D9773F"
   },
-  "window.title": "${activeEditorShort}${separator}${rootName} 🎃"
+  "window.title": "${activeEditorShort}${separator}${rootName} 🎃",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true
 }

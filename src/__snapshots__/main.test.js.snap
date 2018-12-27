@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add CSS To Element 1`] = `
+<ul
+  id="to-do-list"
+  style="margin: 20px auto;"
+>
+  
+        
+  <li>
+    Go shopping
+  </li>
+  
+        
+  <li>
+    Do laundry
+  </li>
+  
+        
+  <li>
+    Raid fridge!
+  </li>
+  
+      
+</ul>
+`;
+
+exports[`Element Children 1`] = `
+Array [
+  <li>
+    Go shopping
+  </li>,
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;
+
+exports[`Element Siblings 1`] = `
+Array [
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;
+
+exports[`First Item(s) In Array 1`] = `
+<li>
+  Go shopping
+</li>
+`;
+
+exports[`Last Item(s) In Array 1`] = `
+<li>
+  Raid fridge!
+</li>
+`;
+
+exports[`Query Selector 1`] = `
+<ul
+  id="to-do-list"
+>
+  
+        
+  <li>
+    Go shopping
+  </li>
+  
+        
+  <li>
+    Do laundry
+  </li>
+  
+        
+  <li>
+    Raid fridge!
+  </li>
+  
+      
+</ul>
+`;
+
+exports[`Query Selector All 1`] = `
+Array [
+  <li>
+    Go shopping
+  </li>,
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;
+
+exports[`Strip Items(s) From Array 1`] = `
+Array [
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;

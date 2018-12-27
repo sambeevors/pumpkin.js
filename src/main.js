@@ -12,9 +12,8 @@ export const qs = (selector, scope = document) => scope.querySelector(selector)
  * @param  {Node} scope      An element to search within [optional]
  * @return {Array}           The matching elements (as an array)
  */
-export const qsa = (selector, scope = document) => [
-  ...scope.querySelectorAll(selector)
-]
+export const qsa = (selector, scope = document) =>
+  [].slice.call(scope.querySelectorAll(selector))
 
 /**
  * Get the first item(s) in an array

@@ -70,10 +70,10 @@ export const truncate = (text, limit, append = '…') => {
   if (text.length > limit)
     for (let i = limit; i > 0; i--)
       if (
-        (text.charAt(i) === ' ' && text.charAt(i - 1) != ',') ||
-        text.charAt(i - 1) != '.' ||
-        text.charAt(i - 1) != ';' ||
-        text.charAt(i - 1) != append
+        (text.charAt(i) === ' ' && text.charAt(i - 1) !== ',') ||
+        text.charAt(i - 1) !== '.' ||
+        text.charAt(i - 1) !== ';' ||
+        text.charAt(i - 1) !== append
       )
         return text.substring(0, i).trim() + (append || '')
   return text

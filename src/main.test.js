@@ -195,3 +195,12 @@ test('Slugify String', () => {
   expect($.slugify('This -- is a ## test ---')).toBe('this-is-a-test')
   expect($.slugify("C'est déjà l'été.")).toBe('cest-deja-lete')
 })
+
+test('Truncate String', () => {
+  expect($.truncate('This is a test', 5)).toBe('This…')
+  expect($.truncate('This is a test', 5, '.')).toBe('This.')
+  expect($.truncate('This            is a test', 10)).toBe('This…')
+  expect($.truncate('This.', 5)).toBe('This.')
+  expect($.truncate('This is a test', 5, false)).toBe('This')
+  expect($.truncate('This.', 5, false)).toBe('This.')
+})

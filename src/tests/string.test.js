@@ -26,4 +26,6 @@ test('Truncate String', () => {
   expect($.truncate('This.', 5, false)).toBe('This.')
   // Test with appendature match
   expect($.truncate('This…', 5)).toBe('This…')
+  // Test with string that is under limit
+  expect($.truncate('This is a test', 100)).toBe('This is a test')
 })

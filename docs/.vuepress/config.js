@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'pumpkin.js 🎃',
+  title: 'pumpkin.js',
   description:
     'A micro-library for writing vanilla javascript as efficiently as possible.',
   head: [

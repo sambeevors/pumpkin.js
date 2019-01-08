@@ -47,7 +47,6 @@ module.exports = {
   docsDir: 'docs',
   editLinks: true,
   ga: 'UA-128293838-1',
-  base: '/pumpkin.js/',
   themeConfig: {
     nav: [
       { text: 'Getting Started', link: '/guide/' },

@@ -9,7 +9,6 @@
     "build": "microbundle --strict",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "vuepress build docs && ./deploy.sh",
     "test": "jest"
   },
   "husky": {

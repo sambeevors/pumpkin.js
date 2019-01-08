@@ -82,7 +82,7 @@ export const truncate = (text, limit, append = '…') => {
 /**
  * Validate an email address
  * @param  {String} email The email address to test
- * @return {Boolean}      The 'truncated' string
+ * @return {Boolean}      If the string is a valid email address
  */
 export const validEmail = email =>
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(

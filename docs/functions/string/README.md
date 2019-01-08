@@ -1,6 +1,10 @@
+---
+sidebarDepth: 0
+---
+
 # String functions
 
-Blah blah blah
+The following functions concern string manipulation.
 
 ## slugify
 
@@ -19,7 +23,9 @@ Slugify a string
 
 ```js
 let str = 'Lorem Ipsum!'
-let slug = $.slugify(str) // 'lorem-ipsum'
+
+$.slugify(str) // 'lorem-ipsum'
+$.slugify(str, '_') // 'lorem_ipsum'
 ```
 
 ## truncate
@@ -40,5 +46,30 @@ Truncate a string
 
 ```js
 let str = 'Lorem Ipsum!'
-let slug = $.truncate(str, 5) // 'Lorem…'
+
+$.truncate(str, 5) // 'Lorem…'
+$.truncate(str, 5, ' - Read more 👉🏻') // 'Lorem - Read more 👉🏻'
+$.truncate(str, 5, false) // 'Lorem'
+```
+
+## validateEmail
+
+Check if a string is recognised as a potential email address
+
+### Parameters
+
+- `email` (type: String) - The email address to test
+
+### Returns
+
+- (type: String) - If the string is a valid email address
+
+### Example
+
+```js
+let realEmail = 'someone@example.com'
+let fakeEmail = 'blah blah blah'
+
+$.validEmail(realEmail) // true
+$.validEmail(fakeEmail) // false
 ```

@@ -1,6 +1,10 @@
+---
+sidebarDepth: 0
+---
+
 # DOM functions
 
-Blah blah blah
+The following functions concern DOM manipulation including events.
 
 ## qs
 
@@ -23,7 +27,7 @@ $foo = $.qs('.foo')
 
 ## qsa
 
-Get all matching elements in the DOM
+Get all matching elements in the DOM as an array
 
 ### Parameters
 

@@ -54,9 +54,9 @@ module.exports = {
       {
         text: 'Functions',
         items: [
-          { text: 'Array', link: 'functions/array/' },
-          { text: 'DOM', link: 'functions/dom/' },
-          { text: 'String', link: 'functions/string/' }
+          { text: 'Array', link: '/functions/array/' },
+          { text: 'DOM', link: '/functions/dom/' },
+          { text: 'String', link: '/functions/string/' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/sambeevors/pumpkin.js' }

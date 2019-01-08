@@ -1,5 +1,7 @@
 ---
 sidebarDepth: 0
+next: /functions/string/
+prev: /functions/array/
 ---
 
 # DOM functions

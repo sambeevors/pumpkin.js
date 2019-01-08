@@ -10,16 +10,16 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:deploy": "vuepress build docs && ./deploy.sh",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
     "*.js": [
-      "npm test",
       "prettier --write src/*.js",
       "git add src/*.js"
     ]
@@ -40,6 +40,6 @@
     "lint-staged": "^8.1.0",
     "microbundle": "^0.9.0",
     "regenerator-runtime": "^0.13.1",
-    "vuepress": "^0.14.4"
+    "vuepress": "^0.14.8"
   }
 }

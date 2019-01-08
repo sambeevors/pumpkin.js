@@ -62,7 +62,7 @@ export const slugify = (text, separator) => {
 /**
  * Truncates a string
  * @param  {String} text   The string to truncate
- * @param  {String} limit  Custom word seperator
+ * @param  {Number} limit  String length limit
  * @param  {Mixed}  append Character(s) to append to the truncated string (or false to omit) [optional]
  * @return {String}        The 'truncated' string
  */
@@ -82,7 +82,7 @@ export const truncate = (text, limit, append = '…') => {
 /**
  * Validate an email address
  * @param  {String} email The email address to test
- * @return {Boolean}      The 'truncated' string
+ * @return {Boolean}      If the string is a valid email address
  */
 export const validEmail = email =>
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(

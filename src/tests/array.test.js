@@ -18,7 +18,7 @@ const dom = new DOM(
   }
 )
 
-test('First Item(s) In Array', () => {
+test('Get first item(s) in array', () => {
   // Basic test
   expect($.first([1, 2, 3, 4])).toBe(1)
   // Test with count parameter
@@ -31,7 +31,7 @@ test('First Item(s) In Array', () => {
   expect($.first([1, 2], 3, true)[0]).toBeUndefined()
 })
 
-test('Last Item(s) In Array', () => {
+test('Get last item(s) in array', () => {
   // Basic test
   expect($.last([1, 2, 3, 4])).toBe(4)
   // Test with count parameter
@@ -44,7 +44,7 @@ test('Last Item(s) In Array', () => {
   expect($.last([1, 2], 3)[0]).toBeUndefined()
 })
 
-test('Strip Items(s) From Array', () => {
+test('Strip item(s) in array', () => {
   // Basic test
   expect($.strip([1, 2, 3, 4], 1)).toContain(2, 3, 4)
   // Test with extra parameters
@@ -55,7 +55,7 @@ test('Strip Items(s) From Array', () => {
   expect($.strip($toDoListItems, $toDoListItem)).toMatchSnapshot()
 })
 
-test('Get Types Of Elements In Array', () => {
+test('Get types of items in array', () => {
   // Basic test
   let undefined
   expect(

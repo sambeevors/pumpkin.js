@@ -1,7 +1,7 @@
 /**
  * Get an element in the DOM
  * @param  {String} selector The selector to match against
- * @param  {Node} scope      An element to search within [optional]
+ * @param  {Node}   scope    An element to search within [optional]
  * @return {Node}            The first matching element
  */
 export const qs = (selector, scope = document) => scope.querySelector(selector)
@@ -9,7 +9,7 @@ export const qs = (selector, scope = document) => scope.querySelector(selector)
 /**
  * Get all matching elements in the DOM
  * @param  {String} selector The selector to match against
- * @param  {Node} scope      An element to search within [optional]
+ * @param  {Node}   scope    An element to search within [optional]
  * @return {Array}           The matching elements (as an array)
  */
 export const qsa = (selector, scope = document) =>
@@ -101,7 +101,7 @@ export const toggle = el => {
 
 /**
  * Apply multiple inline styles to an element
- * @param {Node} el    The element to apply the styles to
+ * @param {Node}   el  The element to apply the styles to
  * @param {Object} obj An object of CSS rules
  */
 export const css = (el, obj) => {
@@ -112,10 +112,10 @@ export const css = (el, obj) => {
 
 /**
  * Apply propagating event handlers
- * @param {String} event    The event to trigger on
- * @param {Array} array     The array of nodes to apply to
- * @param {String} selector Query selector for event to bind to [optional]
- * @param {Function} cb     The function to run upon event trigger
+ * @param {String}   event    The event to trigger on
+ * @param {Array}    array    The array of nodes to apply to
+ * @param {String}   selector Query selector for event to bind to [optional]
+ * @param {Function} cb       The function to run upon event trigger
  */
 export const on = (event, array, selector, cb) => {
   cb = typeof selector === 'function' ? selector : cb

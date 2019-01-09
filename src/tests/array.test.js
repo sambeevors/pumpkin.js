@@ -54,3 +54,35 @@ test('Strip Items(s) From Array', () => {
   // Test with DOM nodes
   expect($.strip($toDoListItems, $toDoListItem)).toMatchSnapshot()
 })
+
+test('Get Types Of Elements In Array', () => {
+  // Basic test
+  let undefined
+  expect(
+    $.types([1, true, 'foo', {}, Symbol(), () => true, undefined])
+  ).toEqual([
+    'number',
+    'boolean',
+    'string',
+    'object',
+    'symbol',
+    'function',
+    'undefined'
+  ])
+  // Test with non-array
+  expect($.types('foo')).toBe('string')
+  // Test with empty array
+  expect($.types([])).toEqual([])
+  // Test with empty object
+  expect($.types({})).toBe('object')
+  // Test with false
+  expect($.types(false)).toBe('boolean')
+  // Test with function
+  expect($.types(() => true)).toBe('function')
+  // Test with immediately invoked function
+  expect($.types((() => true)())).toBe('boolean')
+  // Test with immediately invoked function in array
+  expect($.types([(() => true)()])).toEqual(['boolean'])
+  // Test with no parameter
+  expect($.types()).toEqual([])
+})

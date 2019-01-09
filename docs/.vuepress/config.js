@@ -60,6 +60,50 @@ module.exports = {
       },
       { text: 'GitHub', link: 'https://github.com/sambeevors/pumpkin.js' }
     ],
-    sidebar: 'auto'
+    sidebar: [
+      {
+        title: 'Quick Links',
+        children: ['/', '/guide/']
+      },
+      {
+        title: 'Array Functions',
+        collapsable: false,
+        children: [
+          ['/functions/array/#first', 'First'],
+          ['/functions/array/#last', 'Last'],
+          ['/functions/array/#strip', 'Strip'],
+          ['/functions/array/#types', 'Types']
+        ]
+      },
+      {
+        title: 'DOM Functions',
+        collapsable: false,
+        children: [
+          ['/functions/dom/#qs', 'QS (Query Selector)'],
+          ['/functions/dom/#qsa', 'QSA (Query Selector All)'],
+          ['/functions/dom/#children', 'Children'],
+          ['/functions/dom/#siblings', 'Siblings'],
+          ['/functions/dom/#contains', 'Contains'],
+          ['/functions/dom/#empty', 'Empty'],
+          ['/functions/dom/#remove', 'Remove'],
+          ['/functions/dom/#fromtop', 'From Top'],
+          ['/functions/dom/#show', 'Show'],
+          ['/functions/dom/#hide', 'Hide'],
+          ['/functions/dom/#toggle', 'Toggle'],
+          ['/functions/dom/#css', 'CSS'],
+          ['/functions/dom/#on', 'On Event'],
+          ['/functions/dom/#ready', 'Ready']
+        ]
+      },
+      {
+        title: 'String Functions',
+        collapsable: false,
+        children: [
+          ['/functions/string/#slugify', 'Slugify'],
+          ['/functions/string/#truncate', 'Truncate'],
+          ['/functions/string/#validateemail', 'Validate Email']
+        ]
+      }
+    ]
   }
 }

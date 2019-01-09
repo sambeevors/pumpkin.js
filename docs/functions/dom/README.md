@@ -1,5 +1,4 @@
 ---
-sidebarDepth: 0
 next: /functions/string/
 prev: /functions/array/
 ---
@@ -150,7 +149,14 @@ Get the distance between an element and the top of the page
 
 ### Returns
 
-- (type: Number) - The distance from the top of the page
+- (type: Number) - The distance from the top of the page (in pixels)
+
+### Example
+
+```js
+$foo = $.qs('.foo')
+$.fromTop($foo) // 100
+```
 
 ## show
 

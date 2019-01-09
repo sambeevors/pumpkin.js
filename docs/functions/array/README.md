@@ -1,5 +1,4 @@
 ---
-sidebarDepth: 0
 next: /functions/dom/
 prev: /functions/string/
 ---

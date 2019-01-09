@@ -1,6 +1,6 @@
 import * as $ from '../string'
 
-test('Slugify String', () => {
+test('Slugify a string', () => {
   // Basic test
   expect($.slugify('This is a test')).toBe('this-is-a-test')
   // Test with custom seperator
@@ -17,7 +17,7 @@ test('Slugify String', () => {
   expect($.slugify("C'est déjà l'été.")).toBe('cest-deja-lete')
 })
 
-test('Truncate String', () => {
+test('Truncate a string', () => {
   // Basic test
   expect($.truncate('This is a test', 5)).toBe('This…')
   // Test with custom appendature
@@ -36,7 +36,7 @@ test('Truncate String', () => {
   expect($.truncate('This is a test', 100)).toBe('This is a test')
 })
 
-test('Valid Email', () => {
+test('Validate a potential email address', () => {
   // Basic test
   expect($.validEmail('someone@example.com')).toBe(true)
   // Test with non-.com domain

@@ -26,68 +26,68 @@ const dom = new DOM(
   }
 )
 
-test('Query Selector', () => {
+test('Query selector', () => {
   expect($toDoList).toMatchSnapshot()
 })
 
-test('Query Selector All', () => {
+test('Query selector all', () => {
   expect($toDoListItems).toMatchSnapshot()
 })
 
-test('Element Children', () => {
+test('Get child nodes of an element', () => {
   // Basic test
   expect($.children($toDoList)).toMatchSnapshot()
   // Test element with no children
   expect($.children($hiddenElement)).toHaveLength(0)
 })
 
-test('Element Siblings', () => {
+test('Get sibling nodes of an element', () => {
   // Basic test
   expect($.siblings($toDoListItem)).toMatchSnapshot()
   // Test element with no siblings
   expect($.siblings($container)).toHaveLength(0)
 })
 
-test('Parent Contains Child', () => {
+test('Check if node contains specific child node', () => {
   // Check where true
   expect($.contains($toDoList, $toDoListItem)).toBe(true)
   // Check where false
   expect($.contains($toDoList, $hiddenElement)).toBe(false)
 })
 
-test('Empty Element', () => {
+test('Empty element of all children', () => {
   $.empty($toDoList)
   expect($.children($toDoList)).toHaveLength(0)
 
   dom.resetDom()
 })
 
-test('Remove Element', () => {
+test('Remove element from DOM', () => {
   $.remove($toDoList)
   expect($.qs('#to-do-list')).toBeFalsy()
 
   dom.resetDom()
 })
 
-test('Distance From Top', () => {
+test('Get element distance from top of the page', () => {
   expect($.fromTop($toDoList)).toBeDefined()
 })
 
-test('Show Element', () => {
+test('Visually show an element', () => {
   $.show($hiddenElement)
   expect($hiddenElement.style.display).toBe('')
 
   dom.resetDom()
 })
 
-test('Hide Element', () => {
+test('Visually hide an element', () => {
   $.hide($toDoList)
   expect($toDoList.style.display).toBe('none')
 
   dom.resetDom()
 })
 
-test('Toggle Element', () => {
+test('Toggle element visibility', () => {
   $.toggle($hiddenElement)
   expect($hiddenElement.style.display).toBe('')
 
@@ -97,7 +97,7 @@ test('Toggle Element', () => {
   dom.resetDom()
 })
 
-test('Add CSS To Element', () => {
+test('Add CSS to an element', () => {
   $.css($toDoList, {
     margin: '20px auto',
     fakeProperty: 'foo'
@@ -107,7 +107,7 @@ test('Add CSS To Element', () => {
   dom.resetDom()
 })
 
-test('Propagating Event Listeners', () => {
+test('Initiate a propagating event listener on an element', () => {
   // Setup click event
   let clickEvent = new MouseEvent('click', {
     view: window,
@@ -142,7 +142,7 @@ test('Propagating Event Listeners', () => {
   expect(triggered).toBeFalsy()
 })
 
-test('DOM Ready', () => {
+test('Check when DOM is ready', () => {
   let ready = false
   $.ready(() => {
     ready = true

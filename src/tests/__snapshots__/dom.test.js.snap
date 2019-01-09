@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Add CSS To Element 1`] = `
+exports[`Add CSS to an element 1`] = `
 <ul
   id="to-do-list"
   style="margin: 20px auto;"
@@ -25,7 +25,7 @@ exports[`Add CSS To Element 1`] = `
 </ul>
 `;
 
-exports[`Element Children 1`] = `
+exports[`Get child nodes of an element 1`] = `
 Array [
   <li>
     Go shopping
@@ -39,7 +39,7 @@ Array [
 ]
 `;
 
-exports[`Element Siblings 1`] = `
+exports[`Get sibling nodes of an element 1`] = `
 Array [
   <li>
     Do laundry
@@ -50,7 +50,7 @@ Array [
 ]
 `;
 
-exports[`Query Selector 1`] = `
+exports[`Query selector 1`] = `
 <ul
   id="to-do-list"
 >
@@ -74,7 +74,7 @@ exports[`Query Selector 1`] = `
 </ul>
 `;
 
-exports[`Query Selector All 1`] = `
+exports[`Query selector all 1`] = `
 Array [
   <li>
     Go shopping

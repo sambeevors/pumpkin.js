@@ -85,3 +85,29 @@ const arr = [1, 2, 3, 4, 5]
 $.strip(arr, 2) // [1, 3, 4, 5]
 $.strip(arr, 2, 5) // [1, 3, 4]
 ```
+
+## types
+
+Get the type of each value in an array
+
+### Parameters
+
+- `array` (type: Array) - The array to use
+
+### Returns
+
+- (type: Array) - An array of item types
+
+### Example
+
+```js
+const arr = [1, true, 'foo', {}, Symbol(), () => true]
+
+$.types(arr) // ['number', 'boolean', 'string', 'object', 'symbol', 'function']
+
+/**
+ * Can also be used to test types of non-arrays,
+ * but not reccomended. Use typeof instead.
+ */
+$.types('foo') // 'string'
+```

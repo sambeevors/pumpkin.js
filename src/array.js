@@ -1,7 +1,7 @@
 /**
  * Get the first item(s) in an array
- * @param  {Array} array     The array to select from
- * @param  {Number} count    The number of items to retrieve [optional]
+ * @param  {Array}   array   The array to select from
+ * @param  {Number}  count   The number of items to retrieve [optional]
  * @param  {Boolean} reverse Whether to reverse the returned array [optional]
  * @return {Any}             Either first item or an array of first x items
  */
@@ -15,8 +15,8 @@ export const first = (array, count, reverse) => {
 
 /**
  * Get the last item(s) in an array
- * @param  {Array} array     The array to select from
- * @param  {Number} count    The number of items to retrieve [optional]
+ * @param  {Array}   array   The array to select from
+ * @param  {Number}  count   The number of items to retrieve [optional]
  * @param  {Boolean} reverse Whether to reverse the returned array [optional]
  * @return {Any}             Either last item or an array of last x items
  */
@@ -30,13 +30,29 @@ export const last = (array, count, reverse) => {
 
 /**
  * Remove value(s) from an array
- * @param  {Array} array The array to select from
- * @param  {Any} values  The values to remove
- * @return {Array}       The new array
+ * @param  {Array} array  The array to select from
+ * @param  {Any}   values The values to remove
+ * @return {Array}        The new array
  */
 export const strip = (array, ...values) => {
   values.forEach(value => {
     array = array.filter(item => item !== value)
   })
   return array
+}
+
+/**
+ * Get types of items in an array
+ * @param  {Array} array The array to use
+ * @return {Array}       An array of item types
+ */
+export const types = (array = []) => {
+  if (array.constructor === Array) {
+    const types = []
+    array.forEach(value => {
+      types.push(typeof value)
+    })
+    return types
+  }
+  return typeof array
 }

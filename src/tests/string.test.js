@@ -66,3 +66,37 @@ test('Validate a potential email address', () => {
   // Test with invalid character (special) appending valid top level domain
   expect($.validEmail('someone@example.com!')).toBe(false)
 })
+
+test('Remove HTML tags from a string', () => {
+  // Basic test
+  expect($.stripTags('<p>Hey there!</p>')).toBe('Hey there!')
+  // Test with no HTML
+  expect($.stripTags('Hey there!')).toBe('Hey there!')
+  // Test with nested HTML
+  expect($.stripTags('<p><strong>Hey</strong> there!</p>')).toBe('Hey there!')
+  // Test with "invalid" HTML
+  expect($.stripTags('<foobar>Hey there!</foobar>')).toBe('Hey there!')
+  // Test with unclosed tag
+  expect($.stripTags('<p>Hey there!')).toBe('Hey there!')
+  // Test with HTML attributes
+  expect($.stripTags('<p class="foobar" id="foobar">Hey there!</p>')).toBe(
+    'Hey there!'
+  )
+  // Test with multi-line string
+  expect(
+    $.stripTags(`
+      <div>
+        <p>Hey there!</p>
+      </div>
+    `)
+  ).toBe('Hey there!')
+  // Test with multiple lines of text
+  expect(
+    $.stripTags(`
+      <div>
+        <p>Hey there!</p>
+        <p>How are you?</p>
+      </div>
+    `)
+  ).toBe('Hey there! How are you?')
+})

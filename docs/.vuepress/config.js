@@ -101,7 +101,8 @@ module.exports = {
         children: [
           ['/functions/string/#slugify', 'Slugify'],
           ['/functions/string/#truncate', 'Truncate'],
-          ['/functions/string/#validateemail', 'Validate Email']
+          ['/functions/string/#validateemail', 'Validate Email'],
+          ['/functions/string/#striptags', 'Strip Tags']
         ]
       }
     ]

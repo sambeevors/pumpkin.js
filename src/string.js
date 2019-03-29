@@ -88,3 +88,14 @@ export const validEmail = email =>
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   )
+
+/**
+ * Remove HTML tags from a string
+ * @param  {String} string The string to operate on
+ * @return {String}        The new string, with HTML tags removed
+ */
+export const stripTags = string => {
+  const div = document.createElement('div')
+  div.innerHTML = string
+  return (div.textContent || div.innerText || '').trim().replace(/\s+/g, ' ')
+}

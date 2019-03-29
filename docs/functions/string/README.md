@@ -74,3 +74,27 @@ let fakeEmail = 'blah blah blah'
 $.validEmail(realEmail) // true
 $.validEmail(fakeEmail) // false
 ```
+
+## stripTags
+
+Check if a string is recognised as a potential email address
+
+### Parameters
+
+- `string` (type: String) - The string to operate on
+
+### Returns
+
+- (type: String) - The new string, with HTML tags removed
+
+### Example
+
+```js
+$.stripTags('<div>Hello world</div>') // 'Hello world'
+$.stripTags(`
+  <div>
+    <h1>Hey there!</h1>
+    <p>How are you?</p>
+  </div>
+`) // 'Hey there! How are you?'
+```

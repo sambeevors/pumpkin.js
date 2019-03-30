@@ -14,8 +14,12 @@ Pumpkin attempts to eliminate this by adding numerous little helper functions to
 
 # 🔧 Installation
 
+pumpkin.js can be installed via npm or yarn
 ```
-$ npm i --save pumpkin.js
+npm i --save pumpkin.js
+```
+```
+yarn add pumpkin.js
 ```
 
 # 📦 Usage

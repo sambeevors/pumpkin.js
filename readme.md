@@ -33,7 +33,7 @@ import * as $ from 'pumpkin.js'
 
 ```js
 // ...or just import the function(s) you need
-import css, empty from 'pumpkin.js'
+import { css, empty } from 'pumpkin.js'
 ```
 
 Or just good old CJS imports

@@ -1,7 +1,3 @@
----
-next: /functions/
----
-
 # Getting Started
 
 ## Installation

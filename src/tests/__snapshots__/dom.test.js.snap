@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add CSS to an element 1`] = `
+<ul
+  id="to-do-list"
+  style="margin: 20px auto;"
+>
+  
+      
+  <li>
+    Go shopping
+  </li>
+  
+      
+  <li>
+    Do laundry
+  </li>
+  
+      
+  <li>
+    Raid fridge!
+  </li>
+  
+    
+</ul>
+`;
+
+exports[`Get child nodes of an element 1`] = `
+Array [
+  <li>
+    Go shopping
+  </li>,
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;
+
+exports[`Get sibling nodes of an element 1`] = `
+Array [
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;
+
+exports[`Query selector 1`] = `
+<ul
+  id="to-do-list"
+>
+  
+      
+  <li>
+    Go shopping
+  </li>
+  
+      
+  <li>
+    Do laundry
+  </li>
+  
+      
+  <li>
+    Raid fridge!
+  </li>
+  
+    
+</ul>
+`;
+
+exports[`Query selector all 1`] = `
+Array [
+  <li>
+    Go shopping
+  </li>,
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;

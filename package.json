@@ -1,6 +1,6 @@
 {
   "name": "pumpkin.js",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "A mini-library for helpful JS functions 🎃",
   "author": "Sam Beevors",
   "license": "ISC",
@@ -9,24 +9,24 @@
     "build": "microbundle --strict",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
     "*.js": [
-      "npm test",
-      "prettier --write src/pumpkin.js",
-      "git add src/pumpkin.js"
+      "prettier --write src/*.js",
+      "git add src/*.js"
     ]
   },
-  "main": "dist/pumpkin.js",
-  "umd:main": "dist/pumpkin.umd.js",
-  "module": "dist/pumpkin.mjs",
-  "source": "src/pumpkin.js",
+  "main": "dist/main.js",
+  "umd:main": "dist/main.umd.js",
+  "module": "dist/main.mjs",
+  "source": "src/main.js",
   "files": [
     "dist/*"
   ],
@@ -39,6 +39,6 @@
     "lint-staged": "^8.1.0",
     "microbundle": "^0.9.0",
     "regenerator-runtime": "^0.13.1",
-    "vuepress": "^0.14.4"
+    "vuepress": "^0.14.8"
   }
 }

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get first item(s) in array 1`] = `
+<li>
+  Go shopping
+</li>
+`;
+
+exports[`Get last item(s) in array 1`] = `
+<li>
+  Raid fridge!
+</li>
+`;
+
+exports[`Strip item(s) in array 1`] = `
+Array [
+  <li>
+    Do laundry
+  </li>,
+  <li>
+    Raid fridge!
+  </li>,
+]
+`;
